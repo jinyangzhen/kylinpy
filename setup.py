@@ -27,16 +27,16 @@ def find_version(*file_paths):
 
 
 setup(
-    name='kylinpy',
+    name='kylinpython',
     version=find_version('kylinpy', '__init__.py'),
     author='Yongjie Zhao',
-    author_email='yongjie.zhao@kyligence.io',
-    maintainer='Yongjie Zhao',
-    maintainer_email='yongjie.zhao@kyligence.io',
+    author_email='yangzhen.jin@gmail.com',
+    maintainer='Yangzhen Jin',
+    maintainer_email='yangzhen.jin@gmail.com',
     packages=find_packages(),
-    url='https://github.com/Kyligence/kylinpy',
+    url='https://github.com/jinyangzhen/kylinpy',
     license='MIT License',
-    description='Apache Kylin Python Client Library',
+    description='Apache Kylin Python Client Library with minor fixes',
     long_description=open('README.rst').read(),
     long_description_content_type='text/x-rst',
     install_requires=[],

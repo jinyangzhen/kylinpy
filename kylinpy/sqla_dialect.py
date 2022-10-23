@@ -122,8 +122,12 @@ class KylinDialect(default.DefaultDialect):
         return schemas
 
     def has_table(self, connection, table_name, schema=None):
-        # disable check table exists
-        return False
+        conn = connection.connect()
+        try:
+            conn.connection.connection.get_table_source(table_name, schema)
+            return True
+        except NoSuchTableError:
+            return False
 
     def has_sequence(self, connection, sequence_name, schema=None):
         return False
